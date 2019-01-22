@@ -1,0 +1,38 @@
+{
+	"name": "germania-kg/shipping",
+
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Carsten Witt",
+			"email": "carstenwitt@germania-kg.de",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Germania\\Shipping\\": "src/"
+		}
+	},
+
+  "autoload-dev": {
+      "psr-4": { "tests\\": "tests/src" }
+  },
+
+	"require": {
+		"germania-kg/tracking": "^1.0"
+	},
+
+	"require-dev": {
+		"php-coveralls/php-coveralls": "^2.0",
+		"phpunit/phpunit": "^5.7|^6.0"
+	},
+
+  "scripts": {
+ 		"phpunit": "phpunit --coverage-text",
+
+    "test": [
+        "@phpunit"
+		]
+	}
+}
