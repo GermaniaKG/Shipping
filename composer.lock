@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd207e47e95e4a7b51a0bbaaab8bc571",
+    "content-hash": "6c3d25c80135788d1d1c9e806b3dbd1d",
     "packages": [
         {
             "name": "germania-kg/tracking",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GermaniaKG/Tracking.git",
-                "reference": "a400089ea2cdb889b0c8ef92d4e8719f3cc9d21f"
+                "reference": "cbb3fa998d025c0c4a587ab07668e6d79bfe05c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GermaniaKG/Tracking/zipball/a400089ea2cdb889b0c8ef92d4e8719f3cc9d21f",
-                "reference": "a400089ea2cdb889b0c8ef92d4e8719f3cc9d21f",
+                "url": "https://api.github.com/repos/GermaniaKG/Tracking/zipball/cbb3fa998d025c0c4a587ab07668e6d79bfe05c9",
+                "reference": "cbb3fa998d025c0c4a587ab07668e6d79bfe05c9",
                 "shasum": ""
             },
             "require-dev": {
@@ -41,7 +41,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2019-01-22T11:57:47+00:00"
+            "time": "2019-01-22T14:38:17+00:00"
         }
     ],
     "packages-dev": [
@@ -2391,6 +2391,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.0"
+    },
     "platform-dev": []
 }
