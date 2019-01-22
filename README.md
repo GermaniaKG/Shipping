@@ -28,10 +28,11 @@ This package requires [germania-kg/tracking](https://packagist.org/packages/germ
 
 ### ShipmentItemInterface
 
-The **ShipmentItemInterface** extends *Germania\Shipping\DeliveryNoteNumberProviderInterface* and *Germania\Tracking\TrackingInfoProviderInterface*. It provides grants these methods:
+The **ShipmentItemInterface** extends *Germania\Shipping\DeliveryNoteNumberProviderInterface* and *Germania\Tracking\TrackingInfoProviderInterface* and *\JsonSerializable* . So these methods are provided:
 
 - *getDeliveryNoteNumber*
 - *getTrackingInfo*
+- *jsonSerialize*
 
 
 
@@ -93,7 +94,7 @@ echo ($item instanceOf ShipmentItemInterface)
 
 ### ShipmentItemBundle
 
-Bundles multiple shipment items and lets you add a textual description. It additionally implements **\IteratorAggregate** and **\Countable**.
+Bundles multiple shipment items and lets you add a textual description. It additionally implements **\IteratorAggregate**, **\Countable**, and **\JsonSerializable**:
 
 ```php
 <?php
@@ -125,6 +126,7 @@ foreach ($bundle as $item) {
 	echo $item->getDeliveryNoteNumber();  
 }
 
+echo json_encode( $bundle );
 ```
 
 
