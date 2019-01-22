@@ -20,6 +20,7 @@
   },
 
 	"require": {
+		"php": "^7.0",
 		"germania-kg/tracking": "^1.0"
 	},
 
