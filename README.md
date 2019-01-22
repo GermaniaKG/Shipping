@@ -2,7 +2,9 @@
 
 **Classes and interfaces for dealing with shipment items**
 
-![](https://img.shields.io/packagist/php-v/germania-kg/tracking.svg)
+![](https://img.shields.io/packagist/php-v/germania-kg/shipping.svg)
+[![Build Status](https://travis-ci.org/GermaniaKG/Shipping.svg?branch=master)](https://travis-ci.org/GermaniaKG/Shipping)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/?branch=master)
 
 
 ## Installation
@@ -13,17 +15,12 @@ $ composer require germania-kg/shipping
 
 
 
-## To be done
-
-Complete test suite
-
-
 
 ## Development
 
 ```bash
-$ git clone https://github.com/GermaniaKG/Shipping.git tracking
-$ cd trackinginfo
+$ git clone https://github.com/GermaniaKG/Shipping.git shipping
+$ cd shipping
 $ composer install
 
 # Run PhpUnit
