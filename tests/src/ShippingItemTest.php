@@ -39,7 +39,10 @@ class ShippingItemTest extends \PHPUnit\Framework\TestCase
         $tracking_info = $tracking_info_mock->reveal();
 
         $sut->setTrackingInfo( $tracking_info );
-        $this->assertEquals( $tracking_info, $sut->getTrackingInfo() );
+
+        $sut_tracking_info = $sut->getTrackingInfo();
+        $this->assertEquals( $tracking_info, $sut_tracking_info );
+        $this->assertInstanceOf( TrackingInfoInterface::class, $sut_tracking_info);
     }
 
 
@@ -66,7 +69,6 @@ class ShippingItemTest extends \PHPUnit\Framework\TestCase
         $tracking_info->setTrackingLink("bar");
 
         $sut->setTrackingInfo( $tracking_info );
-        # $json = $sut->jsonSerialize();
         $json = json_decode(json_encode($sut));
 
         $this->assertObjectHasAttribute("delivery_note_number", $json);
