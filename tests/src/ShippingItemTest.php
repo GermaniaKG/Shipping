@@ -4,6 +4,7 @@ namespace tests;
 use Germania\Shipping\ShipmentItem;
 use Germania\Shipping\ShipmentItemInterface;
 use Germania\Tracking\TrackingInfoInterface;
+use Germania\Tracking\TrackingInfo;
 
 use Prophecy\Argument;
 
@@ -38,7 +39,10 @@ class ShippingItemTest extends \PHPUnit\Framework\TestCase
         $tracking_info = $tracking_info_mock->reveal();
 
         $sut->setTrackingInfo( $tracking_info );
-        $this->assertEquals( $tracking_info, $sut->getTrackingInfo() );
+
+        $sut_tracking_info = $sut->getTrackingInfo();
+        $this->assertEquals( $tracking_info, $sut_tracking_info );
+        $this->assertInstanceOf( TrackingInfoInterface::class, $sut_tracking_info);
     }
 
 
@@ -51,6 +55,29 @@ class ShippingItemTest extends \PHPUnit\Framework\TestCase
 
         $fluent = $sut->setDeliveryNoteNumber( $delivery_note_number );
         $this->assertInstanceOf( ShipmentItemInterface::class , $fluent );
+    }
+
+
+    public function testJson( )
+    {
+        $sut = new ShipmentItem;
+
+        $this->assertEmpty( $sut->getTrackingInfo() );
+
+        $tracking_info = new TrackingInfo;
+        $tracking_info->setTrackingID("foo");
+        $tracking_info->setTrackingLink("bar");
+
+        $sut->setTrackingInfo( $tracking_info );
+        $json = json_decode(json_encode($sut));
+
+        $this->assertObjectHasAttribute("delivery_note_number", $json);
+        $this->assertObjectHasAttribute("tracking_info", $json);
+
+        $ti = $json->tracking_info;
+        $this->assertObjectHasAttribute("id", $ti);
+        $this->assertObjectHasAttribute("href", $ti);
+
     }
 
 

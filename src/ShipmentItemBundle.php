@@ -6,7 +6,7 @@ namespace Germania\Shipping;
 /**
  * Just for collecting Shipment items with a common textual description.
  */
-class ShipmentItemBundle implements \IteratorAggregate, \Countable
+class ShipmentItemBundle implements \IteratorAggregate, \Countable, \JsonSerializable
 {
 
     /**
@@ -74,6 +74,15 @@ class ShipmentItemBundle implements \IteratorAggregate, \Countable
     public function count()
     {
         return count( $this->items );
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function jsonSerialize()
+    {
+        return $this->items;
     }
 
 
