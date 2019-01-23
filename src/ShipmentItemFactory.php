@@ -8,13 +8,12 @@ class ShipmentItemFactory
 
     public $php_record_class = ShipmentItem::class;
 
-
-    public function fromArray( $data )
+    public function fromArray( $data, $php_class = null )
     {
         $this->assertArray( $data);
 
         // Setup new instance
-        $php_class = $this->php_record_class;
+        $php_class = $php_class ?: $this->php_record_class;
         $shipment_item = new $php_class;
 
         // Required fields:
