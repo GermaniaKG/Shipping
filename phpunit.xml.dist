@@ -2,7 +2,6 @@
 
 <phpunit colors="true"
 		 stopOnFailure="true"
-		 syntaxCheck="true"
 		 bootstrap="tests/bootstrap.php"
 		 beStrictAboutCoversAnnotation="true"
 		 verbose="true">
