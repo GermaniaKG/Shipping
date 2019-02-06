@@ -6,7 +6,6 @@
 		 beStrictAboutCoversAnnotation="true"
 		 verbose="true">
 
-
 	<testsuites>
 		<testsuite name="Test Suite">
 			<directory>tests/src</directory>
