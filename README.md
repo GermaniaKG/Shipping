@@ -30,10 +30,11 @@ This package requires [germania-kg/tracking](https://packagist.org/packages/germ
 
 ### ShipmentItemInterface
 
-The **ShipmentItemInterface** extends *Germania\Shipping\DeliveryNoteNumberProviderInterface* and *Germania\Tracking\TrackingInfoProviderInterface* and *\JsonSerializable* . So these methods are provided:
+The **ShipmentItemInterface** extends *Germania\Shipping\DeliveryNoteNumberProviderInterface* and *Germania\Tracking\TrackingInfoAwareInterface* and *\JsonSerializable* . So these methods are provided:
 
 - *getDeliveryNoteNumber*
 - *getTrackingInfo*
+- *setTrackingInfo*
 - *jsonSerialize*
 
 
