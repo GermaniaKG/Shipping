@@ -1,9 +1,9 @@
 <?php
 namespace Germania\Shipping;
 
-use Germania\Tracking\TrackingInfoProviderInterface;
+use Germania\Tracking\TrackingInfoAwareInterface;
 
-interface ShipmentItemInterface extends DeliveryNoteNumberProviderInterface, TrackingInfoProviderInterface, \JsonSerializable
+interface ShipmentItemInterface extends DeliveryNoteNumberProviderInterface, TrackingInfoAwareInterface, \JsonSerializable
 {
 
 
