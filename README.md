@@ -58,7 +58,7 @@ $item = new ShipmentItem;
 $item->setDeliveryNoteNumber( "123456" );
 $item->setTrackingInfo( $tracking_info );
 
-// Eval
+// Use getters
 echo $item->getDeliveryNoteNumber();              // "123456"
 echo $item->getTrackingInfo()->getTrackingLink(); // "https://track.test.com/?id=foo"
 echo $item->getTrackingInfo()->getTrackingID();   // "foo"
