@@ -5,7 +5,7 @@
     "authors": [
         {
             "name": "Carsten Witt",
-            "email": "carstenwitt@germania-kg.de",
+            "email": "admin@germania-kg.com",
             "role": "Developer"
         }
     ],
@@ -20,13 +20,15 @@
     },
 
     "require": {
-        "php": "^7.0",
+        "php": "^7.4|^8.0",
         "germania-kg/tracking": "^1.0"
     },
 
     "require-dev": {
         "php-coveralls/php-coveralls": "^2.0",
-        "phpunit/phpunit": "^5.7|^6.0|^7.0"
+        "phpunit/phpunit": "^9.0",
+        "phpspec/prophecy": "^1.16",
+        "phpstan/phpstan": "^1.9"
     },
 
     "scripts": {
