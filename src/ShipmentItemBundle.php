@@ -69,17 +69,16 @@ class ShipmentItemBundle implements \IteratorAggregate, \Countable, \JsonSeriali
 
     /**
      * Counts the ShipmentItems
-     * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count( $this->items );
     }
 
 
-    /**
-     * @inheritDoc
-     */
+
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->items;
@@ -87,9 +86,9 @@ class ShipmentItemBundle implements \IteratorAggregate, \Countable, \JsonSeriali
 
 
     /**
-     * @inheritDoc
-     * @return ArrayIterator
+     * @return \ArrayIterator
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return new \ArrayIterator( $this->items );

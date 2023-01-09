@@ -23,9 +23,8 @@ abstract class ShipmentItemAbstract implements ShipmentItemInterface
         return $this->delivery_note_number;
     }
 
-    /**
-     * @inheritDoc
-     */
+
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return array(

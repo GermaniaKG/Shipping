@@ -79,7 +79,7 @@ class ShippingItemBundleTest extends \PHPUnit\Framework\TestCase
         : new ShipmentItemBundle( $items );
 
         $bundle_items = $sut->getDeliveryNoteNumbers();
-        $this->assertInternalType("array", $bundle_items );
+        $this->assertIsArray($bundle_items );
         foreach($items as $i):
             $this->assertTrue(in_array($i->getDeliveryNoteNumber(), $bundle_items ));
         endforeach;
@@ -97,7 +97,7 @@ class ShippingItemBundleTest extends \PHPUnit\Framework\TestCase
         $this->assertInstanceOf( \JsonSerializable::class, $sut);
 
         $json_sut = json_decode(json_encode($sut));
-        $this->assertInternalType( "array", $json_sut);
+        $this->assertIsArray($json_sut);
 
         foreach($json_sut as $json_item):
             $this->assertObjectHasAttribute('delivery_note_number', $json_item);
