@@ -4,11 +4,7 @@
 
 [![Packagist](https://img.shields.io/packagist/v/germania-kg/shipping.svg?style=flat)](https://packagist.org/packages/germania-kg/shipping)
 [![PHP version](https://img.shields.io/packagist/php-v/germania-kg/shipping.svg)](https://packagist.org/packages/germania-kg/shipping)
-[![Build Status](https://img.shields.io/travis/GermaniaKG/Shipping.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/Shipping)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Shipping/build-status/master)
-
+[![Tests](https://github.com/GermaniaKG/Shipping/actions/workflows/tests.yml/badge.svg)](https://github.com/GermaniaKG/Shipping/actions/workflows/tests.yml)
 
 ## Installation
 
